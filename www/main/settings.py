@@ -17,6 +17,7 @@ ALLOWED_HOSTS = ["*"]
 
 
 LOCAL_APPS = [
+    "api",
 ]
 
 INSTALLED_APPS = [
