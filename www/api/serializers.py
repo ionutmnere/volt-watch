@@ -4,6 +4,10 @@ from .models import VoltageSample
 
 
 class VoltageSampleSerializer(serializers.ModelSerializer):
-	class Meta:
-		model = VoltageSample
-		fields = ("cell_id", "voltage", "timestamp",)
+    class Meta:
+        model = VoltageSample
+        fields = (
+            "cell_id",
+            "voltage",
+            "timestamp",
+        )

@@ -10,11 +10,11 @@ from .serializers import VoltageSampleSerializer
 @api_view(["POST"])
 @csrf_exempt
 def voltage(request):
-	"""Save every sensor data into our DB"""
+    """Save every sensor data into our DB"""
 
-	reading = VoltageSampleSerializer(data=request.data)
-	if not reading.is_valid():
-		return Response(reading.errors, status=status.HTTP_400_BAD_REQUEST)
-	
-	reading.save()
-	return Response(reading.data, status=status.HTTP_201_CREATED)
+    reading = VoltageSampleSerializer(data=request.data)
+    if not reading.is_valid():
+        return Response(reading.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    reading.save()
+    return Response(reading.data, status=status.HTTP_201_CREATED)
