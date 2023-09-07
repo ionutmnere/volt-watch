@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -6,8 +7,8 @@ from .models import VoltageSample
 from .serializers import VoltageSampleSerializer
 
 
-
 @api_view(["POST"])
+@csrf_exempt
 def voltage(request):
 	"""Save every sensor data into our DB"""
 

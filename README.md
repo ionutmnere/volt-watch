@@ -8,7 +8,6 @@ Infrastructure
 - [ ] deployment
 
 Server software
-- [ ] simple data collection api
+- [x] simple data collection api
 - [ ] plain / tabelar admin view
 - [ ] historic view
-
