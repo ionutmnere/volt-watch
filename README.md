@@ -4,10 +4,11 @@ A battery monitoring system
 ## The plan
 
 Infrastructure
-- [ ] server setup
-- [ ] deployment
+- [x] server setup
+- [x] deployment
 
 Server software
 - [x] simple data collection api
-- [ ] plain / tabelar admin view
+- [x] plain / tabelar admin view
 - [ ] historic view
+- [ ] token authentication for POST operations
