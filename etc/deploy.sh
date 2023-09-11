@@ -29,6 +29,7 @@ set -euo pipefail
 
 su django
 cd ~/volt-watch/www
+git pull
 ./manage.py migrate
 exit
 
