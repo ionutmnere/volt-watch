@@ -5,6 +5,9 @@ set -euo pipefail
 PROJECT_ROOT=$(git rev-parse --show-toplevel)
 PROJECT_NAME=$(basename $PROJECT_ROOT)
 
+cd $PROJECT_ROOT
+./go-local collectstatic --no-input
+
 printf " --\n"
 printf " -- deploying $PROJECT_NAME (from $PROJECT_ROOT)\n"
 printf " --\n"
@@ -23,6 +26,11 @@ printf " --\n"
 
 ssh root@164.92.180.216 /bin/bash <<'EOT'
 set -euo pipefail
+
+su django
+cd ~/volt-watch/www
+./manage.py migrate
+exit
 
 chown django:www-data /var/www/html/volt-watch
 
