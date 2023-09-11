@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# run pre-deploy commands
+cd www
+./manage.py collectstatic
+./manage.py migrate
+cd ..
